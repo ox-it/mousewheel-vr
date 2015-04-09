@@ -3,17 +3,20 @@ import time
 import random
 import zope.event
 
-
-
 def mock():
+	import time
+
 	print "STARTING MOCK"
+
 	minincrement=-2
 	maxincrement=3
 	increment=0
-	maxcount=45000
+	#maxcount=45000
+	maxcount=750
 	dist=0 #in metres
 	count=0
-	timeinterval=1/120
+	timeinterval=1.0/120.0
+	print timeinterval
 	while count<maxcount:  
   	  #waits 1/120 seconds(time between each check)
   	  time.sleep(timeinterval)
@@ -44,5 +47,6 @@ def mock():
   	  #time.sleep(0.25)    #gives us time to read the value of count
 
 	  #   create event with count
- 	  print "SENDING COUNT EVENT", count
 	  zope.event.notify(count)
+	print "Reached maximum count"
+	zope.event.notify(-1)
