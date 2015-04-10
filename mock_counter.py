@@ -11,8 +11,11 @@ def mock():
 	minincrement=-2
 	maxincrement=3
 	increment=0
+	
+	# Use a smaller count for testing purposes
 	#maxcount=45000
-	maxcount=750
+	maxcount=45000
+	
 	dist=0 #in metres
 	count=0
 	timeinterval=1.0/120.0
@@ -47,6 +50,6 @@ def mock():
   	  #time.sleep(0.25)    #gives us time to read the value of count
 
 	  #   create event with count
-	  zope.event.notify(count)
+	  zope.event.notify(increment)
 	print "Reached maximum count"
 	zope.event.notify(-1)
