@@ -14,9 +14,10 @@ Install pip if needed
 
     sudo apt-get install python-pip
 
-Install pexpect
+Install pexpect, zope.event
 
     pip install pexpect
+    pip install zope.event
 
 
 ## Running
