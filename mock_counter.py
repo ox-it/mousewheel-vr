@@ -14,7 +14,7 @@ def mock():
 	
 	# Use a smaller count for testing purposes
 	#maxcount=45000
-	maxcount=5000
+	maxcount=45000
 	
 	dist=0 #in metres
 	count=0
